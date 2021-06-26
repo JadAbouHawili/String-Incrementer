@@ -3,7 +3,7 @@
 increment_string(value)
 type(value) is str
 
-What the program does:
+What the function does:
 Takes a string and increments its end number (if exists) by adding 1 to it, leading zeros are considered and contribute to the length of the output
 Takes a string and increments it by appending '1' to the end if no number is present.
 '''
@@ -11,10 +11,10 @@ import re
 
 
 def increment_string(strng):
-    # use regular expression to find a match at the end of the string(use $ at the end of pattern) for digit characters
+    # use regular expression to find a match at the end of the string for digit characters
     num_match = re.search(r'\d+$', strng)
     lst = list(strng)
-
+    # keep count of current index in strng
     counter = -1
     if num_match:
         digits = num_match.group()
