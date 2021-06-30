@@ -23,7 +23,7 @@ def increment_string(strng):
     if num_match:
         digits = num_match.group()
 
-        # check from right to left 
+        # check from right to left
         for i in strng:
             counter += 1
             # until hit first digit of number (number is at end of string)
@@ -54,5 +54,5 @@ def increment_string(strng):
         return strng+'1'
 
 
-print(increment_string('foobar'), increment_string('foobar001'), increment_string('foobar010'), increment_string('foobar100'),
-      increment_string('foobar0100'), increment_string('foobar9'), increment_string('foobar09'), increment_string('foobar009'))
+print('foobar: '+increment_string('foobar'), 'foobar001 :'+increment_string('foobar001'), 'foobar010: '+increment_string('foobar010'), 'foobar100: '+increment_string('foobar100'),
+      'foobar0100: '+increment_string('foobar0100'), 'foobar9: '+increment_string('foobar9'), 'foobar09: '+increment_string('foobar09'), 'foobar009: '+increment_string('foobar009'), sep='\n')
