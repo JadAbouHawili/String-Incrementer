@@ -21,8 +21,7 @@ def increment_string(strng):
     # the first algorithm
     # check if there is a number at the end of strng
     if num_match:
-        digits = num_match.group()
-
+        original_num_slice = num_match.group()
         # check from right to left
         for i in strng:
             counter += 1
@@ -33,14 +32,16 @@ def increment_string(strng):
                     return ''.join(lst)
 
                 lst[counter:] = str(int(''.join(lst[counter:]))+1)
-                if len(re.search(r'\d+$', ''.join(lst)).group()) < len(num_match.group()):
+                incremented_num_slice = re.search(
+                    r'\d+$', ''.join(lst)).group()
+                if len(incremented_num_slice) < len(original_num_slice):
                     lst[counter:] = (
-                        ['0']*(len(num_match.group())-len(re.search(r'\d+$', ''.join(lst)).group())))+lst[counter:]
+                        ['0']*(len(original_num_slice)-len(incremented_num_slice)))+lst[counter:]
                     return ''.join(lst)
 
-                if len(re.search(r'\d+$', ''.join(lst)).group()) > len(num_match.group()):
+                if len(incremented_num_slice) > len(original_num_slice):
                     lst[counter:] = list(''.join(lst[counter:]).replace('0', '', len(
-                        re.search(r'\d+$', ''.join(lst)).group())-len(num_match.group())))
+                        incremented_num_slice)-len(original_num_slice)))
                     # here lies the problem
                     # current logic counter-... in the below is not working
                     # counter not useful because it gives number and after it, the added 0not detected when replacing, therefore wrong output
