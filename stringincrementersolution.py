@@ -1,5 +1,5 @@
 '''increment_string function definition'''
-# make proper modifications to this document stating what it does doc strings, comment it properly, provide clearer strcuture using comments and other methods etc...
+
 
 import re
 
@@ -42,6 +42,7 @@ def increment_string(strng):
                     r'\d+$', ''.join(lst)).group()
 
                 # checking length of original and incremented num_slice and adjusting the '0' count accordingly
+
                 if len(incremented_num_slice) < len(original_num_slice):
                     lst[counter:] = (
                         ['0']*(len(original_num_slice)-len(incremented_num_slice)))+lst[counter:]
