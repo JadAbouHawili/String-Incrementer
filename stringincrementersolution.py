@@ -63,6 +63,7 @@ def increment_string(strng):
         return strng+'1'
 
 
-# tests to verify algorithm works as described ( in github description )
+# tests to verify algorithm works as described
+# at the beginning of the function definition
 print('foobar: '+increment_string('foobar'), 'foobar001 :'+increment_string('foobar001'), 'foobar010: '+increment_string('foobar010'), 'foobar100: '+increment_string('foobar100'),
       'foobar0100: '+increment_string('foobar0100'), 'foobar9: '+increment_string('foobar9'), 'foobar09: '+increment_string('foobar09'), 'foobar009: '+increment_string('foobar009'), sep='\n')
