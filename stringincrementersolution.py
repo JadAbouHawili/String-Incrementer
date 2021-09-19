@@ -10,7 +10,7 @@ def increment_string(strng):
     type(value) is str
 
     What the function does:
-    The breif logic of the two algorithms the function chooses from which are based under the first if, else statement respectively:
+    The breif logic of the two algorithms the function chooses from, which are based under the first if, else statement respectively:
     Takes a string and increments its end number (if exists) by adding 1 to it and returns the resultant as string ( leading zeros are considered and contribute to the length of the output
     Takes a string and increments it by appending '1' to the end if no number is present and returns the resultant string
     '''
